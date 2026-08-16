@@ -18,6 +18,21 @@ mdc: true
 What, when, and why to use Claude Code's cloud environment
 
 ---
+layout: image-left
+image: ./images/narze.jpg
+class: text-left
+---
+
+# Manassarn Manoonchai
+
+Noom `@narze`
+
+- `Eventpop` - Lead Software Engineer
+- `TokenMe` - CTO / Co-founder
+- `Manoonchai` - Keyboard Layout
+- `GeekCraft` - Maker
+
+---
 layout: default
 ---
 
@@ -48,7 +63,8 @@ layout: default
 
 # Claude Code on local machine
 
-- Text Editor, IDE (Via extensions)
+- CLI
+- Text Editor, IDE (via extensions)
 - Desktop App
 
 ---
@@ -66,24 +82,51 @@ layout: default
 
 # Claude Code on the web
 
-- aka. Claude Cloud
 - Runs on Anthropic-managed cloud server
 - GitHub Repo Integration
+- I'll call it "Claude Cloud"
+
+---
+
+# What's in the Cloud?
+
+- Ubuntu 24.04
+- 4vCPU, 16GB RAM, 30GB disk
+- Preinstalled: Node.js, Python, Ruby, PHP, Java, Rust, Go, Docker, Postgres, Redis, `git`, `jq`, etc.
 
 ---
 layout: center
 ---
 
-# Claude Cloud vs Claude Remote
+# Claude Remote vs Claude Cloud
+
+What's the difference?
 
 ---
-layout: center
-class: align-center
+layout: two-cols-header
 ---
 
-# Claude Cloud vs Claude Remote
+::left::
 
-[Insert meme image here]
+<div class="h-full flex flex-col items-center justify-center text-center">
+
+<img src="./images/pre_claude_cloud.jpg" class="max-h-110 object-contain" />
+
+Claude Remote
+
+</div>
+
+::right::
+
+<div v-click class="h-full flex flex-col items-center justify-center text-center">
+
+<img src="./images/post_claude_cloud.jpg" class="max-h-110 object-contain" />
+
+Claude Cloud
+
+</div>
+
+::center::
 
 ---
 layout: default
@@ -118,7 +161,7 @@ layout: default
 
 # Claude Cloud - Desktop
 
-- Select repo to use
+- Select repo(s) to use
 
 <center style="height: 85%">
 <img src="./images/desktop_select_repo.png" style="height: 100%" />
@@ -128,7 +171,7 @@ layout: default
 
 # Claude Cloud - Web
 
-Same as desktop, but runs on browser `https://claude.ai/code`
+Same as desktop, but runs on browser - `claude.ai/code`
 
 <center style="height: 85%">
 <img src="./images/claude_code_web.png" style="height: 100%" />
@@ -141,9 +184,11 @@ Same as desktop, but runs on browser `https://claude.ai/code`
 <center style="height: 90%">
 <div style="display: flex; gap: 2rem; align-items: center; height: 100%; justify-content: center;">
   <img src="./images/claude_code_mobile_sidebar.jpg" style="height: 100%;" />
+  <img src="./images/claude_code_mobile_sidebar_continue_work.jpg" style="height: 100%;" />
   <img src="./images/claude_code_mobile.jpg" style="height: 100%;" />
 </div>
 </center>
+
 ---
 
 # Claude Cloud - CLI
@@ -164,32 +209,51 @@ class: text-center
 # Use cases & examples
 
 ---
-layout: center
----
-# Plan on mobile -> Implement -> PR opened
 
-[Plan & work on commute, continue and review at work/home]
+# Plan on mobile -> Continue on laptop
+
+Plan & work on commute, continue and review at work/home
+
+<center style="height: 75%">
+<div style="display: flex; gap: 3rem; align-items: stretch; height: 100%; justify-content: center;">
+  <div class="h-full flex flex-col items-center justify-center text-center gap-2">
+    <img src="./images/plan_on_mobile.jpg" style="max-height: calc(100% - 2rem); object-fit: contain;" />
+    <p class="m-0">Plan & work</p>
+  </div>
+  <div class="h-full flex flex-col items-center justify-center text-center gap-2">
+    <img src="./images/continue_work_on_laptop.png" style="max-height: calc(100% - 2rem); object-fit: contain;" />
+    <p class="m-0">Review & fix</p>
+  </div>
+</div>
+</center>
 
 ---
-layout: center
+layout: default
 ---
 
 # Use with connectors / skills
 
+<center style="height: 110%">
+<img src="./images/claude_connectors.png" style="height: 100%">
+</center>
+
+---
+
+# Example prompts
+
 - `"Implement jira task EVP-1234"`
 - `"Babysit github PR #5678"`
 - `"Fix bug reported from Slack <link-to-slack-thread>"`
-- `"Improve this UI/UX /grill-me <paste-image>"`<br>(Invoke repo-defined skill in `.claude/skills`)
+- `"/grill-me Improve UI/UX on this page <paste-image>"`
+- `Would you kindly rewrite everything in Rust? No mistakes. 🦀`
 
 ---
-layout: center
+layout: default
 ---
 
 # Use with Claude Routine
 
 - Claude Routine could also use cloud environment
-
----
 
 ![Claude Routine Cloud](./images/claude_routine_cloud.png)
 
@@ -205,14 +269,38 @@ Automated PR from schedule & event trigger
 - Custom `POST` webhook trigger
 
 ---
+layout: default
+---
+
+# Routine + Cloud: Fix CI fails & merge conflicts
+
+<img src="./images/claude_routine_example.png" />
+
+---
+layout: default
+---
+
+# Routine + Cloud: Automated pull requests
+
+<img src="./images/claude_routine_pull_requests.png" />
+
+
+---
+layout: center
+---
+
+# Summary
+
+---
 
 # Claude Cloud - The Good
 
 <v-clicks>
 
-- Works from any device
+- Works from anywhere, any device
+- Minimum setup
 - Auth connectors once, use anywhere
-- Anthropic-cloud is FREE* (For now)
+- Anthropic-cloud is FREE (For now)
 - Sandboxed environment by default (code cloned from Github, your data is safe)
 - No need to manage local resources, RAM is saved
 - Parallel with no overhead (Bottleneck is you & your code reviewers)
@@ -225,7 +313,10 @@ Automated PR from schedule & event trigger
 
 <v-clicks>
 
-- You need to prime your setup well, otherwise it will be slow and token-hungry
+- Github integration only
+- Repo setup : If your codebase needs complicated setup locally, it will be hard on the cloud, too.
+  - Outcome 1 : Project cannot run and agent edit code blindly, hence worse result
+  - Outcome 2 : Project cannot run and agent tries to make it run, hence more token consumption, less context for work
 - Your local Claude skills, plugins may not work
 - Cold-starts & cold-resume
 - Harder to debug mid-session (no debugger, no shells, no logs, only prompt)
@@ -233,25 +324,41 @@ Automated PR from schedule & event trigger
 </v-clicks>
 
 ---
+layout: center
+---
 
-# Diagrams
+# Tips & Tricks
 
-Mermaid diagrams render directly in markdown.
+---
 
-```mermaid
-graph LR
-  A[Write markdown] --> B[Ask your agent]
-  B --> C[Agent edits slides.md]
-  C --> D[Preview live]
-  D --> A
-```
+# Inject skills & CLAUDE.md with `narze/claude-cloud-init`
+
+- Problem: I want to use my own set of agent skills & CLAUDE.md
+- Solution: Create custom bash script to download & inject files into cloud environment
+
+<center style="height: 80%">
+<img src="./images/claude_cloud_init_setup_script.png" style="height: 100%" />
+</center>
+
+---
+
+<center style="height: 90%">
+  <img src="./images/claude_injected_skills.png" style="height: 100%" /><br/>
+  Use Matt's skills anywhere!
+</center>
+
+---
+
+# Setup cloud environment for complex projects
+
+- Prompt: `"Setup the project so that app and tests can be run, then create single bash script to replicate the successful setup."`
+- When it succeeds, paste the script in setup step and test in fresh session to verify that it works
 
 ---
 layout: center
 class: text-center
 ---
+
 # Your Turn
 
-Replace these slides with your own content, or ask your AI agent to do it.
-
-See `CLAUDE.md` for how the agent tooling in this template works.
+Open Claude on the web right now and try it out!
