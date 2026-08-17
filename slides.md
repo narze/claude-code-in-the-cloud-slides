@@ -61,11 +61,11 @@ layout: center
 layout: default
 ---
 
-# Claude Code on local machine
+# Claude Code on a local machine
 
 - CLI
-- Text Editor, IDE (via extensions)
-- Desktop App
+- Text editor, IDE (via extensions)
+- Desktop app
 
 ---
 layout: default
@@ -73,7 +73,7 @@ layout: default
 
 # Claude Code remote
 
-- Also local, but control via mobile app i.e. "Remote control"
+- Also local, but controlled via the mobile app, i.e., "Remote Control"
 - Setting: `Enable Remote Control for all sessions`
 
 ---
@@ -82,7 +82,7 @@ layout: default
 
 # Claude Code on the web
 
-- Runs on Anthropic-managed cloud server
+- Runs on an Anthropic-managed cloud server
 - GitHub Repo Integration
 - I'll call it "Claude Cloud"
 
@@ -91,7 +91,7 @@ layout: default
 # What's in the Cloud?
 
 - Ubuntu 24.04
-- 4vCPU, 16GB RAM, 30GB disk
+- 4 vCPUs, 16GB RAM, 30GB disk
 - Preinstalled: Node.js, Python, Ruby, PHP, Java, Rust, Go, Docker, Postgres, Redis, `git`, `jq`, etc.
 
 ---
@@ -143,7 +143,7 @@ layout: default
 
 # Claude Cloud - Desktop
 
-- Click `Local`, then change to `Cloud`, and add cloud environment
+- Click `Local`, then change to `Cloud`, and add a cloud environment
 
 ![](./images/desktop_add_cloud_env.png)
 
@@ -151,7 +151,7 @@ layout: default
 
 # Claude Cloud - Desktop
 
-- Setup cloud environment
+- Set up a cloud environment
 
 <center style="height: 85%">
 <img src="./images/desktop_setup_cloud_environment.png" style="height: 100%" />
@@ -171,7 +171,7 @@ layout: default
 
 # Claude Cloud - Web
 
-Same as desktop, but runs on browser - `claude.ai/code`
+Same as desktop, but runs in the browser - `claude.ai/code`
 
 <center style="height: 85%">
 <img src="./images/claude_code_web.png" style="height: 100%" />
@@ -194,7 +194,7 @@ Same as desktop, but runs on browser - `claude.ai/code`
 # Claude Cloud - CLI
 
 - `claude --cloud "Prompt"`
-- Continue on app/web or CLI with `--teleport`
+- Continue on the app, web, or CLI with `--teleport`
 - Weird workflow, not recommended
 
 <center style="height: 85%">
@@ -253,26 +253,26 @@ layout: default
 
 # Use with Claude Routine
 
-- Claude Routine could also use cloud environment
+- Claude Routine can also use a cloud environment
 
 ![Claude Routine Cloud](./images/claude_routine_cloud.png)
 
 ---
 
 # Claude Routine + Cloud
-Automated PR from schedule & event trigger
+Automated PRs from schedules and event triggers
 
 - Daily - Fix my PR merge conflicts
 - Daily - Scan unresolved issues on Sentry, choose one and fix it
-- Github event - When PR merged, post changes summary in non-technical term to Slack
-- Weekly - Update project's agent skill with `npx skills update -p`
+- GitHub event - When a PR is merged, post a summary of the changes in non-technical terms to Slack
+- Weekly - Update the project's agent skills with `npx skills update -p`
 - Custom `POST` webhook trigger
 
 ---
 layout: default
 ---
 
-# Routine + Cloud: Fix CI fails & merge conflicts
+# Routine + Cloud: Fix CI failures and merge conflicts
 
 <img src="./images/claude_routine_example.png" />
 
@@ -298,12 +298,12 @@ layout: center
 <v-clicks>
 
 - Works from anywhere, any device
-- Minimum setup
-- Auth connectors once, use anywhere
-- Anthropic-cloud is FREE (For now)
-- Sandboxed environment by default (code cloned from Github, your data is safe)
-- No need to manage local resources, RAM is saved
-- Parallel with no overhead (Bottleneck is you & your code reviewers)
+- Minimal setup
+- Authenticate connectors once, then use them anywhere
+- Anthropic cloud is FREE (for now)
+- Sandboxed environment by default (code is cloned from GitHub, so your data is safe)
+- No need to manage local resources - RAM is saved
+- Runs in parallel with no overhead (the bottleneck is you and your code reviewers)
 
 </v-clicks>
 
@@ -313,13 +313,13 @@ layout: center
 
 <v-clicks>
 
-- Github integration only
-- Repo setup : If your codebase needs complicated setup locally, it will be hard on the cloud, too.
-  - Outcome 1 : Project cannot run and agent edit code blindly, hence worse result
-  - Outcome 2 : Project cannot run and agent tries to make it run, hence more token consumption, less context for work
-- Your local Claude skills, plugins may not work
-- Cold-starts & cold-resume
-- Harder to debug mid-session (no debugger, no shells, no logs, only prompt)
+- GitHub integration only
+- Repo setup: If your codebase needs a complicated local setup, it will be hard on the cloud too.
+  - Outcome 1: The project cannot run, and the agent edits code blindly, hence a worse result
+  - Outcome 2: The project cannot run, and the agent tries to make it run, hence more token consumption and less context for work
+- Your local Claude skills and plugins may not work
+- Cold starts and cold resumes
+- Harder to debug mid-session (no debugger, no shell, no logs, only the prompt)
 
 </v-clicks>
 
@@ -349,10 +349,10 @@ layout: center
 
 ---
 
-# Setup cloud environment for complex projects
+# Set up a cloud environment for complex projects
 
-- Prompt: `"Setup the project so that app and tests can be run, then create single bash script to replicate the successful setup."`
-- When it succeeds, paste the script in setup step and test in fresh session to verify that it works
+- Prompt: `"Set up the project so that the app and tests can be run, then create a single bash script to replicate the successful setup."`
+- When it succeeds, paste the script in the setup step and test it in a fresh session to verify that it works
 
 ---
 layout: center
@@ -362,3 +362,9 @@ class: text-center
 # Your Turn
 
 Open Claude on the web right now and try it out!
+
+---
+layout: center
+---
+
+# Thanks!
