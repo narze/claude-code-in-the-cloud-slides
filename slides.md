@@ -11,6 +11,10 @@ drawings:
   persist: false
 transition: slide-left
 mdc: true
+# duration of the presentation, default is '30min'
+duration: 25min
+# timer mode, can be 'countdown' or 'stopwatch', default is 'stopwatch'
+timer: stopwatch
 ---
 
 # Work anywhere with <br> Claude Code in the Cloud
