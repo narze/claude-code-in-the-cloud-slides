@@ -319,9 +319,9 @@ layout: center
 
 - GitHub integration only
 - Repo setup: If your codebase needs a complicated local setup, it will be hard on the cloud too.
-  - Outcome 1: The project cannot run, and the agent edits code blindly, hence a worse result
-  - Outcome 2: The project cannot run, and the agent tries to make it run, hence more token consumption and less context for work
-- Your local Claude skills and plugins may not work
+- **Outcome 1**: The project cannot run, and the agent edits code blindly, hence a worse result
+- **Outcome 2**: The project cannot run, and the agent tries to make it run, hence more token consumption and less context for work
+- Your local setup of Claude skills, plugins, and MCPs may not work
 - Cold starts and cold resumes
 - Harder to debug mid-session (no debugger, no shell, no logs, only the prompt)
 
@@ -340,8 +340,19 @@ layout: center
 - Problem: I want to use my own set of agent skills & CLAUDE.md
 - Solution: Create custom bash script to download & inject files into cloud environment
 
-<center style="height: 80%">
-<img src="./images/claude_cloud_init_setup_script.png" style="height: 100%" />
+---
+
+<center style="height: 95%">
+<img src="./images/claude_cloud_init_repo.png" style="height: 100%; margin-bottom: 0.5rem;" />
+<code>narze/claude-cloud-init</code>
+</center>
+
+
+---
+
+<center style="height: 90%">
+<img src="./images/claude_cloud_init_setup_script.png" style="height: 100%; margin-bottom: 0.5rem;" />
+Define setup script in Claude Cloud environment
 </center>
 
 ---
@@ -355,8 +366,13 @@ layout: center
 
 # Set up a cloud environment for complex projects
 
+<v-clicks>
+
+- Treat Claude Cloud environment as a *brand new machine*.
 - Prompt: `"Set up the project so that the app and tests can be run, then create a single bash script to replicate the successful setup."`
 - When it succeeds, paste the script in the setup step and test it in a fresh session to verify that it works
+
+</v-clicks>
 
 ---
 layout: center
