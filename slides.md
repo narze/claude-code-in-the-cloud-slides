@@ -31,10 +31,10 @@ class: text-left
 
 Noom `@narze`
 
-- `Eventpop` - Lead Software Engineer
+- `Eventpop` - Lead Software Engineer / Co-founder
 - `TokenMe` - CTO / Co-founder
-- `Manoonchai` - Keyboard Layout
 - `GeekCraft` - Maker
+- `Manoonchai` - Keyboard Layout
 
 ---
 layout: default
