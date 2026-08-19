@@ -303,6 +303,7 @@ layout: center
 
 - Works from anywhere, any device
 - Minimal setup
+- Copy-Pasting image work out of the box
 - Authenticate connectors once, then use them anywhere
 - Anthropic cloud is FREE (for now)
 - Sandboxed environment by default (code is cloned from GitHub, so your data is safe)
