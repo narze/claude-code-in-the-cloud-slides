@@ -386,6 +386,11 @@ Open Claude on the web right now and try it out!
 
 ---
 layout: center
+class: text-center
 ---
 
 # Thanks!
+
+<img src="./images/thank_you_qr.png" style="height: 220px; margin: 1rem auto;" />
+
+[narze.github.io/claude-code-in-the-cloud-slides](https://narze.github.io/claude-code-in-the-cloud-slides)
