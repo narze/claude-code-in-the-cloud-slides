@@ -7,6 +7,9 @@ info: |
 
   Fork it, delete these example slides, and write your own deck in this file.
 class: text-center
+colorSchema: dark
+themeConfig:
+  primary: '#ff6a1f'
 drawings:
   persist: false
 transition: slide-left

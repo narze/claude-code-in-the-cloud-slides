@@ -1,3 +1,35 @@
+/*
+ * Warm dark theme, matching the Claude Code meetup site:
+ * https://jun-meetups.vercel.app/meetups/claude-code-3/
+ */
+:root {
+  --cc-void: #0a0605;
+  --cc-card: #150c09;
+  --cc-line: #2c1a12;
+  --cc-glow: #ff6a1f;
+  --cc-glow-soft: #ff8a3d;
+  --cc-flame: #ff9d6b;
+  --cc-coral: #e88a63;
+  --cc-bone: #f5ede6;
+  --cc-ash: #b3a196;
+}
+
+html.dark {
+  --slidev-code-background: var(--cc-card);
+  --slidev-code-foreground: var(--cc-bone);
+  --slidev-code-tab-divider: var(--cc-line);
+  --slidev-code-tab-text-color: var(--cc-ash);
+  --slidev-code-tab-active-text-color: var(--cc-bone);
+}
+
+html.dark .bg-main {
+  background-color: var(--cc-void) !important;
+}
+
+html.dark .text-main {
+  color: var(--cc-bone) !important;
+}
+
 .slidev-layout {
   font-size: 20px;
 }
@@ -16,4 +48,22 @@
 .slidev-layout h3 {
   font-size: 1.75rem;
   line-height: 1.3;
+}
+
+.slidev-layout h1,
+.slidev-layout h2 {
+  color: var(--cc-flame);
+}
+
+.slidev-layout a {
+  color: var(--cc-coral);
+}
+
+.slidev-layout a:hover {
+  color: var(--cc-glow-soft);
+}
+
+.slidev-layout ::selection {
+  background: var(--cc-glow);
+  color: var(--cc-void);
 }
