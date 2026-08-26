@@ -1,6 +1,6 @@
 ---
 theme: default
-title: Claude Code in the Cloud
+title: Codex in the Cloud
 info: |
   ## Slidev AI Template
   A minimal Slidev starter wired up for AI coding agents.
@@ -20,9 +20,9 @@ duration: 25min
 timer: stopwatch
 ---
 
-# Work anywhere with <br> Claude Code in the Cloud
+# Work anywhere with <br> Codex in the Cloud
 
-What, when, and why to use Claude Code's cloud environment
+What, when, and why to use Codex's cloud environment
 
 ---
 layout: image-left
